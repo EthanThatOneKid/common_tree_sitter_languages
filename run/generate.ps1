@@ -7,7 +7,7 @@ import { FileSystem } from "https://deno.land/x/quickr@0.6.30/main/file_system.j
 import { capitalize, indent, toCamelCase, digitsToEnglishArray, toPascalCase, toKebabCase, toSnakeCase, toScreamingtoKebabCase, toScreamingtoSnakeCase, toRepresentation, toString } from "https://deno.land/x/good@0.7.8/string.js"
 import { Console, cyan, white, yellow, green, red } from "https://deno.land/x/quickr@0.6.30/main/console.js"
 import { run, Stdout, returnAsString } from "https://deno.land/x/quickr@0.6.30/main/run.js"
-import { binaryify } from "https://deno.land/x/binaryify@2.4.1.0/binaryify_api.js"
+import { binaryify } from "https://deno.land/x/binaryify@2.5.5.0/binaryify_api.js"
 
 Console.env.NO_COLOR = "true"
 await FileSystem.cd(FileSystem.thisFolder+"/..")
