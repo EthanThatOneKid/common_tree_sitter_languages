@@ -16,6 +16,7 @@ for (const each of await FileSystem.listFileItemsIn("./main")) {
         await binaryify({
             pathToBinary: each.path,
             pathToBinarified: `./main/${each.name}.js`,
+            disableSelfUpdating: true,
         })
         const commitHash = (await run`git rev-parse HEAD ${Stdout(returnAsString)}`).trim()
         console.log(`import ${toCamelCase(each.name)} from "https://github.com/jeff-hykin/common_tree_sitter_languages/raw/${commitHash}/main/${each.name}.js"`)
